@@ -1,0 +1,35 @@
+/* Ekranın tamamını kaplaması için flex ayarları */
+.container {
+    display: flex;
+    height: 100vh; /* Sayfanın tam yüksekliği */
+    width: 100vw;  /* Sayfanın tam genişliği */
+    margin: 0;     /* Kenar boşluklarını sıfırlayın */
+    padding: 0;    /* İç boşlukları sıfırlayın */
+}
+
+.dashboard {
+    width: 20%; /* Sol menü genişliği */
+    background-color: #ff0000; /* İsteğe bağlı menü rengi */
+    height: 100vh; /* Tam yükseklik */
+    margin: 0; /* Boşlukları kaldırın */
+    padding: 0; /* İç boşlukları kaldırın */
+}
+
+.main {
+    width: 80%; /* İçerik kısmının genişliği */
+    height: 100vh; /* Tam yükseklik */
+    margin: 0; /* Boşlukları kaldırın */
+    padding: 0; /* İç boşlukları kaldırın */
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+}
+.navbar {
+    height: 10%; /* Navbar yüksekliği */
+    background-color: #00ff33;
+}.content {
+    flex-grow: 1;
+    background-color: peru;
+    overflow: auto; /* İçerik taşarsa kaydırma çubuğu */
+}
+
