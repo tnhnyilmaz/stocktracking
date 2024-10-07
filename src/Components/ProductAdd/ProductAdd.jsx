@@ -139,8 +139,8 @@ const ProductAdd = () => {
     };
 
     return (
-        <div className='bg-customPalette-lightest h-screen opacity-50 px-4'>
-            <div className='bg-white w-full h-full rounded-lg p-4'>
+        <div className='bg-customPalette-lightest h-auto opacity-50 px-4'>
+            <div className='bg-white w-full h-full rounded-lg p-4 py-4'>
                 <div className='flex items-center gap-2'>
                     <FaCube className='text-5xl' />
                     <div className='px-3'></div>
@@ -156,7 +156,7 @@ const ProductAdd = () => {
                     <TbCategory2 className='text-3xl ml-2' />
                     <div className='px-4'></div>
                     <div className='text-sm  font-bold w-1/3'>KATEGORİ</div>
-                    <div className='w-2/12 relative'>
+                    <div className='w-2/12 relative z-20'>
                         <span
                             onClick={handleCategories}
                             className='bg-customPalette-dark border-customPalette-medium uppercase font-bold text-white text-xs rounded-3xl p-1'
@@ -206,19 +206,18 @@ const ProductAdd = () => {
                 </div>
                 <div className='py-2'></div>
 
-                <div className='flex items-center gap-2'>
+                <div className='flex relative items-center gap-2'>
                     <div className='text-3xl ml-2'> <FaPoll /></div>
                     <div className='px-4'></div>
                     <div className='text-sm  font-bold w-1/3'>ALIŞ/SATIŞ BİRİMİ</div>
-                    <button className='w-1/3 border-2 border-gray-300 rounded-sm p-2 h-10'>
-                        <div onClick={handleUnit} className='flex items-center justify-between text-customPalette-dark'>
+                    <button onClick={handleUnit} className='w-1/3 relative z-30 border-2 border-gray-300 rounded-sm p-2 h-10'>
+                        <div  className='flex items-center justify-between text-customPalette-dark'>
                             <span>{selectedUnit}</span>
                             <RiArrowDropDownLine className='text-2xl' />
-
                             {
                                 unit && (
                                     <div
-                                        className='absolute mt-8 w-1/3 h-1/3 overflow-y-scroll bg-white border-2 border-customPalette-medium rounded-lg p-2 shadow-black shadow-md'
+                                        className='absolute mt-14 w-full h-1/12  overflow-y-scroll bg-white border-2 border-customPalette-medium rounded-lg p-2 shadow-black shadow-md'
                                         onClick={(e) => e.stopPropagation()}  // Burada olayın yayılmasını durduruyoruz
                                     >
                                         <input
@@ -262,7 +261,7 @@ const ProductAdd = () => {
                 />
                 <hr className='w-full border-customPalette-medium' />
                 <div className='py-2'></div>
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2 relative z-20'>
                     <div className='text-3xl ml-2'> <HiOutlineReceiptTax /></div>
                     <div className='px-4'></div>
                     <div className='text-sm  font-bold w-1/3'>KDV ORANI</div>
@@ -305,9 +304,21 @@ const ProductAdd = () => {
                     value={vergilerDahilSatisFiyati}
                     readOnly={true}
                 />
+                <div className='flex justify-end ml-24 mt-4 w-2/3'>
+                    <button className='w-1/6 mr-2'>
+                        <div className='bg-yellow-600 w-full rounded-xl p-2'>
+                            VAZGEÇ
+                        </div>
+                    </button>
+                    <button className='w-1/6'>
+                        <div className='bg-yellow-600 w-full rounded-xl p-2'>
+                            KAYDET
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
-    )   
+    )
 }
 
 export default ProductAdd

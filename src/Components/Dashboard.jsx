@@ -57,7 +57,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div className='bg-customPalette-dark h-full'>
+        <div className='bg-customPalette-dark h-screen '>
             <img className='w-3/6' src="https://cdn-icons-png.flaticon.com/512/9252/9252207.png" alt="" />
             <div>
                 {

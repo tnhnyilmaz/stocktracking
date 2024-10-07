@@ -6,7 +6,7 @@ const Navbar = () => {
     const [check, setCheck] = useState(false)
     console.log(check)
     return (
-        <div className='bg-customPalette-lightest bg-opacity-50'>
+        <div className='bg-customPalette-lightest bg-opacity-50 '>
             <div className='flex items-center justify-between p-4 text-black'>
                 <div className='font-bold text-2xl'>Ürünler</div>
                 <div className='flex items-center ml-4'>

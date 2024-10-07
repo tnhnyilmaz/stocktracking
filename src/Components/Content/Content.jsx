@@ -30,15 +30,14 @@ const Content = () => {
             price2: '5.280,00₺',
         },
     ];
-    // Arama inputu her değiştiğinde bu fonksiyon çağrılacak
     const handleAddProduct = () => {
-        navigate('/add-product'); // Yönlendirme yapar
+        navigate('/add-product');
     };
     const handleInputChange = (event) => {
-        setSearchTerm(event.target.value);  // Kullanıcının girdiği değeri state'e set ediyoruz
+        setSearchTerm(event.target.value);
     };
     return (
-        <div className='bg-customPalette-lightest bg-opacity-50 w-full h-full p-4'>
+        <div className='bg-customPalette-lightest bg-opacity-50 w-full  h-full max-h-screen p-4 '>
             <div className='items-center flex gap-4'>
                 <div className='relative w-4/6'>
                     <input clas
