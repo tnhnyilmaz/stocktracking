@@ -33,6 +33,9 @@ const Content = () => {
     const handleAddProduct = () => {
         navigate('/add-product');
     };
+    const handleStockUpdate=()=>{
+        navigate('/stock-update')
+    }
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
     };
@@ -53,7 +56,7 @@ const Content = () => {
                     <FaPlus className='items-center text-lg justify-end' />
                     Ürün Ekle
                 </div>
-                <div className='w-1/6 h-11 bg-customPalette-yelllow items-center rounded-sm justify-center gap-2 pl-2 flex hover:bg-opacity-60 duration-300'>
+                <div onClick={handleStockUpdate} className='w-1/6 h-11 bg-customPalette-yelllow items-center rounded-sm justify-center gap-2 pl-2 flex hover:bg-opacity-60 duration-300'>
                     <BsBuildingCheck className='items-center text-xl justify-end' />
                     Stok Güncelle
                 </div>

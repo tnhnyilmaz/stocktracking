@@ -5,6 +5,7 @@ import Dashboard from '../Components/Dashboard';
 import Navbar from '../Components/Navbar/Navbar';
 import ProductAdd from '../Components/ProductAdd/ProductAdd';
 import './Home.css'; // CSS dosyasını ekleyin
+import StockUpdate from '../Components/StockUpdate/StockUpdate';
 
 const Home = () => {
     return (
@@ -15,10 +16,7 @@ const Home = () => {
             <div className='w-4/5 h-screen flex flex-col'>
                 <Navbar />
                 <div className='flex-1 overflow-auto'>
-                    <Routes>
-                        <Route path="/" element={<Content />} />
-                        <Route path="/add-product" element={<ProductAdd />} /> {/* Yeni sayfa rotasını ekleyin */}
-                    </Routes>
+                    
                 </div>
             </div>
         </div>
